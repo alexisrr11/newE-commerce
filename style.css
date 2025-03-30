@@ -106,7 +106,7 @@ header h1{
     padding: 2rem .3rem;
     z-index: 1;
 }
-.sidebar:hover .sidebar__element {
+.sidebar__element {
     grid-template-columns: 40px 1fr;
 }
 .sidebar__list {
