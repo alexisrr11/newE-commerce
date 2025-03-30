@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     
         message += `\nTotal a pagar: $${total.toFixed(2)}`;
-        const phoneNumber = "1137659081"; // Tu número de WhatsApp
+        const phoneNumber = "541137659081"; // Tu número de WhatsApp
         const encodedMessage = encodeURIComponent(message);
         const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     
