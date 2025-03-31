@@ -30,56 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSlider();
 });
 
-//Slider marcas 
-function initializeSlider() {
-    if (window.matchMedia("(max-width: 500px)").matches) {
-        const slider = document.querySelector('.slider-marcas');
-        const images = document.querySelectorAll('.slider-marcas img');
-        let index = 0;
-        let startX = 0;
-        let moveX = 0;
-
-        function moveSlider() {
-            index++;
-            if (index >= images.length) {
-                index = 0;
-                slider.style.transition = "none";
-                slider.style.transform = `translateX(0%)`;
-                setTimeout(() => {
-                    slider.style.transition = "transform 0.5s ease-in-out";
-                });
-            } else {
-                slider.style.transform = `translateX(${-index * 100}%)`;
-            }
-        }
-
-        slider.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        slider.addEventListener('touchmove', (e) => {
-            moveX = e.touches[0].clientX - startX;
-        });
-
-        slider.addEventListener('touchend', () => {
-            if (moveX < -50) {
-                moveSlider();
-            }
-        });
-
-        setInterval(() => moveSlider(), 3000);
-    }
-}
-
-if (window.matchMedia("(max-width: 500px)").matches) {
-    initializeSlider();
-}
-
-window.addEventListener('resize', () => {
-    if (window.matchMedia("(max-width: 500px)").matches) {
-        initializeSlider();
-    }
-});
 
 //Toggle Menu Sidebar
 const toggleSidebar = document.querySelector(".open-side"); 
@@ -227,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     
         message += `\nTotal a pagar: $${total.toFixed(2)}`;
-        const phoneNumber = "541137659081"; // Tu número de WhatsApp
+        const phoneNumber = "541137659081";
         const encodedMessage = encodeURIComponent(message);
         const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     
@@ -429,4 +379,4 @@ function restaurarLikes() {
 }
 
 
-//  debugger 
+//  debugger
