@@ -5,7 +5,7 @@ const todosLosProductos = document.getElementById("nuevosProductos");
 let productosAPI = []; 
 
 try {
-    fetch("./productosArray.json")
+    fetch("../productosArray.json")
     .then(res => res.json())
     .then(data => {
         renderizarProdcutos (data);
