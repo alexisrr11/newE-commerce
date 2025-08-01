@@ -176,7 +176,6 @@ header h1{
     cursor: pointer;
 }
 
-
 .like-btn a {
     color: black;
     cursor: pointer;
@@ -284,6 +283,18 @@ header h1{
     color: #fff;
     padding: 15px;
     border-radius: 50px;
+    border: none;
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+.btns-likes {
+    display: flex;
+    gap: 5px;
+}
+.btns-likes button {
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
     border: none;
     background-color: var(--color-primary);
     cursor: pointer;
