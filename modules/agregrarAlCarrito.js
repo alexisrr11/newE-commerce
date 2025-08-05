@@ -1,6 +1,11 @@
 const cartContainer = document.getElementById("cartContainer");
 const totalPriceElement = document.getElementById("totalPrice");
-let cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
+let cartProducts = JSON.parse(localStorage.getItem("cart")) || [];}
+
+// Forzar que sea un array
+if (!Array.isArray(cartProducts)) {
+  cartProducts = [];
+}
 
 document.addEventListener("click", function(event) {
         if (event.target.closest(".add-to-cart")) {
