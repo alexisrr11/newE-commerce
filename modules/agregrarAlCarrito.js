@@ -2,16 +2,22 @@ const cartContainer = document.getElementById("cartContainer");
 const totalPriceElement = document.getElementById("totalPrice");
 let cartProducts = JSON.parse(localStorage.getItem("cart")) || [];}
 
-// Forzar que sea un array
-if (!Array.isArray(cartProducts)) {
+try {
+  const parsedCart = JSON.parse(localStorage.getItem("cart"));
+  if (!Array.isArray(parsedCart)) {
+    throw new Error("cart no es array");
+  }
+  cartProducts = parsedCart;
+} catch (e) {
   cartProducts = [];
+  localStorage.removeItem("cart");
 }
 
 document.addEventListener("click", function(event) {
         if (event.target.closest(".add-to-cart")) {
             addToCart(event);
         }
-    });
+});
 
 function addToCart(event) {
       const button = event.target;
