@@ -1,6 +1,6 @@
 const cartContainer = document.getElementById("cartContainer");
 const totalPriceElement = document.getElementById("totalPrice");
-let cartProducts = JSON.parse(localStorage.getItem("cart")) || [];}
+let cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
 
 try {
   const parsedCart = JSON.parse(localStorage.getItem("cart"));
