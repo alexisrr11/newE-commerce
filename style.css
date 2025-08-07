@@ -299,6 +299,9 @@ header h1{
     background-color: var(--color-primary);
     cursor: pointer;
 }
+.liked-product {
+    padding: 0 10px;
+}
 .cart-product {
     position: relative;
 }
@@ -444,3 +447,4 @@ footer {
     }
     
 }
+
